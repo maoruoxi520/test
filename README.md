@@ -100,3 +100,148 @@ a58d8ce init
 On branch master
 Your branch is ahead of 'origin1/master' by 5 commits.
   (use "git push" to publish your local commits)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+ 
+	modified:   a.txt
+ 
+[maoruoxi520@23:20:04]~/learnGit$ git reset a.txt 
+Unstaged changes after reset:
+M	a.txt
+[maoruoxi520@23:20:40]~/learnGit$ git status a.txt 
+On branch master
+Your branch is ahead of 'origin1/master' by 5 commits.
+  (use "git push" to publish your local commits)
+ 
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+ 
+	modified:   a.txt
+ 
+no changes added to commit (use "git add" and/or "git commit -a")
+[maoruoxi520@23:20:54]~/learnGit$ 
+[maoruoxi520@23:21:43]~/learnGit$ git checkout a.txt 
+[maoruoxi520@23:21:54]~/learnGit$ 
+[maoruoxi520@23:21:55]~/learnGit$ git status
+On branch master
+Your branch is ahead of 'origin1/master' by 5 commits.
+  (use "git push" to publish your local commits)
+ 
+nothing to commit, working tree clean
+[maoruoxi520@23:21:58]~/learnGit$ 
+[maoruoxi520@23:22:01]~/learnGit$ git  reset  2a06c56 a.txt 
+Unstaged changes after reset:
+M	a.txt
+[maoruoxi520@23:22:35]~/learnGit$ git status
+On branch master
+Your branch is ahead of 'origin1/master' by 5 commits.
+  (use "git push" to publish your local commits)
+ 
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+ 
+	modified:   a.txt
+ 
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+ 
+	modified:   a.txt
+ 
+[maoruoxi520@23:22:43]~/learnGit$ git checkout a.txt 
+[maoruoxi520@23:23:31]~/learnGit$ git status
+On branch master
+Your branch is ahead of 'origin1/master' by 5 commits.
+  (use "git push" to publish your local commits)
+ 
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+ 
+	modified:   a.txt
+ 
+[maoruoxi520@23:23:40]~/learnGit$ cat a.txt 
+ 
+a1
+a2
+[maoruoxi520@23:23:49]~/learnGit$
+
+
+[maoruoxi520@23:44:43]~/learnGit$ git log --oneline
+4305959 (HEAD -> master) add a3
+2a06c56 add a2
+89b3021 add a1
+a58d8ce init
+ 
+[maoruoxi520@23:46:20]~/learnGit$ 
+[maoruoxi520@23:46:31]~/learnGit$ cat a.txt 
+a1
+a2
+a3
+[maoruoxi520@23:46:38]~/learnGit$ 
+[maoruoxi520@23:46:39]~/learnGit$ git checkout 2a06c56 a.txt 
+[maoruoxi520@23:46:55]~/learnGit$ git status
+On branch master
+Your branch is ahead of 'origin1/master' by 5 commits.
+  (use "git push" to publish your local commits)
+ 
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+ 
+	modified:   a.txt
+ 
+[maoruoxi520@23:47:00]~/learnGit$ cat a.txt 
+a1
+a2
+[maoruoxi520@23:47:54]~/learnGit$ 
+[maoruoxi520@23:49:12]~/learnGit$ git checkout HEAD  a.txt 
+[maoruoxi520@23:49:40]~/learnGit$ 
+[maoruoxi520@23:49:42]~/learnGit$ git status
+On branch master
+Your branch is ahead of 'origin1/master' by 5 commits.
+  (use "git push" to publish your local commits)
+ 
+nothing to commit, working tree clean
+[maoruoxi520@23:49:45]~/learnGit$ 
+[maoruoxi520@23:49:45]~/learnGit$ cat a.txt 
+a1
+a2
+a3
+[maoruoxi520@23:57:03]~/learnGit$
+
+
+[maoruoxi520@00:05:19]~/learnGit$ cat a.txt 
+a3
+[maoruoxi520@00:05:35]~/learnGit$ echo 'a4' >> a.txt 
+[maoruoxi520@00:05:45]~/learnGit$ git add .
+[maoruoxi520@00:06:01]~/learnGit$ cat a.txt 
+a3
+a4
+[maoruoxi520@00:06:27]~/learnGit$ echo 'a5' >> a.txt 
+[maoruoxi520@00:06:01]~/learnGit$ cat a.txt 
+a3
+a4
+a5
+[maoruoxi520@00:06:40]~/learnGit$ git status
+On branch master
+Your branch is ahead of 'origin1/master' by 5 commits.
+  (use "git push" to publish your local commits)
+ 
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+ 
+	modified:   a.txt
+ 
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+ 
+	modified:   a.txt
+ 
+[maoruoxi520@00:07:04]~/learnGit$ 
+[maoruoxi520@00:07:09]~/learnGit$ git checkout a.txt 
+[maoruoxi520@00:07:19]~/learnGit$ 
+[maoruoxi520@00:07:20]~/learnGit$ cat a.txt 
+a3
+a4
+[maoruoxi520@00:07:27]~/learnGit$
